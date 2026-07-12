@@ -12,7 +12,7 @@ box-sizing: border-box;
 }
 
 body {
-font-family: Impact, Remo, sans-serif;
+font-family: Impact, sans-serif;
 background: linear-gradient(135deg, #0A1F16 0%, #0BB5B5 100%);
 min-height: 100vh;
 display: flex;
@@ -23,49 +23,50 @@ padding: 20px;
 
 .container {
 text-align: center;
-max-width: 1000px;
+max-width: 600px;
+width: 100%;
 }
 
 h1 {
-color: #00ffff;
+color: #0BB5B5;
 font-size: 48px;
-margin-bottom: 50px;
-text-shadow: 0 0 20px rgba(11, 181, 181, 0.5);
+margin-bottom: 60px;
+letter-spacing: 4px;
 }
 
 .options {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+display: flex;
+flex-direction: column;
 gap: 30px;
-margin-top: 40px;
 }
 
-.option-box {
-background: rgba(10, 31, 22, 0.8);
+.box {
+background: rgba(11, 181, 181, 0.1);
 border: 2px solid #0BB5B5;
 padding: 40px;
-border-radius: 10px;
+border-radius: 8px;
 cursor: pointer;
 transition: all 0.3s ease;
-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+letter-spacing: 2px;
 }
 
-.option-box:hover {
+.box:hover {
 background: rgba(11, 181, 181, 0.2);
-transform: translateY(-5px);
-box-shadow: 0 12px 24px rgba(11, 181, 181, 0.4);
+transform: scale(1.05);
 }
 
-.option-box h2 {
-color: #00ffff;
+.box h2 {
+color: #0BB5B5;
 font-size: 28px;
 margin-bottom: 15px;
+letter-spacing: 3px;
 }
 
-.option-box p {
+.box p {
 color: #ffffff;
 font-size: 16px;
 line-height: 1.6;
+letter-spacing: 1px;
 }
 </style>
 </head>
@@ -73,26 +74,19 @@ line-height: 1.6;
 <div class="container">
 <h1>SKEC</h1>
 <div class="options">
-<div class="option-box" onclick="selectOption('overview')">
+<div class="box">
 <h2>Course Overview</h2>
-<p>Understand the full structure and what you'll learn in each module</p>
+<p>Start with a guided introduction to all ten modules and see what you'll cover</p>
 </div>
-<div class="option-box" onclick="selectOption('resources')">
+<div class="box">
 <h2>Resources & Downloads</h2>
-<p>Access all the teaching materials, templates, and practical resources</p>
+<p>Jump straight to free templates, guides, and teaching materials</p>
 </div>
-<div class="option-box" onclick="selectOption('coaching')">
+<div class="box">
 <h2>Coaching Video</h2>
-<p>Watch tutorials and see what else is available on ETCPD</p>
+<p>Watch a quick video tour of everything else on offer</p>
 </div>
 </div>
 </div>
-
-<script>
-function selectOption(option) {
-alert('You selected: ' + option);
-// Later we can link to actual pages here
-}
-</script>
 </body>
 </html>
