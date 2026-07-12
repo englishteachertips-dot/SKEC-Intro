@@ -2,91 +2,105 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SKEC - English Subject Knowledge Enhancement</title>
+<title>SKEC Intro</title>
 <style>
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
 
-body {
-font-family: Impact, sans-serif;
-background: linear-gradient(135deg, #0A1F16 0%, #0BB5B5 100%);
-min-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 20px;
-}
+  :root {
+    --bg-black: #05070a;
+    --teal-glow: #14b8a6;
+    --teal-bright: #2dd4bf;
+    --teal-dim: #0d9488;
+    --white: #f4faf9;
+  }
 
-.container {
-text-align: center;
-max-width: 600px;
-width: 100%;
-}
+  * { box-sizing: border-box; margin: 0; padding: 0; }
 
-h1 {
-color: #0BB5B5;
-font-size: 48px;
-margin-bottom: 60px;
-letter-spacing: 4px;
-}
+  body {
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at 90% 10%, rgba(20,184,166,0.55) 0%, rgba(20,184,166,0.15) 30%, transparent 55%),
+      radial-gradient(circle at 0% 90%, rgba(88,28,135,0.35) 0%, transparent 45%),
+      var(--bg-black);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 24px;
+  }
 
-.options {
-display: flex;
-flex-direction: column;
-gap: 30px;
-}
+  h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 64px;
+    letter-spacing: 4px;
+    color: var(--teal-bright);
+    text-shadow: 0 0 24px rgba(45,212,191,0.4);
+    margin-bottom: 48px;
+  }
 
-.box {
-background: rgba(11, 181, 181, 0.1);
-border: 2px solid #0BB5B5;
-padding: 40px;
-border-radius: 8px;
-cursor: pointer;
-transition: all 0.3s ease;
-letter-spacing: 2px;
-}
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    width: 100%;
+    max-width: 640px;
+  }
 
-.box:hover {
-background: rgba(11, 181, 181, 0.2);
-transform: scale(1.05);
-}
+  .card {
+    background: rgba(20,184,166,0.06);
+    border: 1.5px solid rgba(45,212,191,0.5);
+    border-radius: 14px;
+    padding: 32px 36px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  }
 
-.box h2 {
-color: #0BB5B5;
-font-size: 28px;
-margin-bottom: 15px;
-letter-spacing: 3px;
-}
+  .card:hover {
+    transform: translateY(-4px);
+    background: rgba(20,184,166,0.14);
+    border-color: var(--teal-bright);
+  }
 
-.box p {
-color: #ffffff;
-font-size: 16px;
-line-height: 1.6;
-letter-spacing: 1px;
-}
+  .card h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    letter-spacing: 1px;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+
+  .card p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: rgba(244,250,249,0.75);
+    line-height: 1.5;
+  }
 </style>
 </head>
 <body>
-<div class="container">
-<h1>SKEC</h1>
-<div class="options">
-<div class="box">
-<h2>Course Overview</h2>
-<p>Start with a guided introduction to all ten modules and see what you'll cover</p>
-</div>
-<div class="box">
-<h2>Resources & Downloads</h2>
-<p>Jump straight to free templates, guides, and teaching materials</p>
-</div>
-<div class="box">
-<h2>Coaching Video</h2>
-<p>Watch a quick video tour of everything else on offer</p>
-</div>
-</div>
-</div>
+
+  <h1>SKEC</h1>
+
+  <div class="options">
+    <div class="card" onclick="alert('Course Overview selected')">
+      <h2>Course Overview</h2>
+      <p>Start with a guided introduction to all ten modules and see what you'll cover</p>
+    </div>
+
+    <div class="card" onclick="alert('Resources & Downloads selected')">
+      <h2>Resources &amp; Downloads</h2>
+      <p>Jump straight to free templates, guides, and teaching materials</p>
+    </div>
+
+    <div class="card" onclick="alert('Coaching Video selected')">
+      <h2>Coaching Video</h2>
+      <p>Watch a quick video tour of everything else on offer</p>
+    </div>
+  </div>
+
 </body>
 </html>
