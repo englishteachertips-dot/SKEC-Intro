@@ -4,89 +4,91 @@
 <meta charset="UTF-8">
 <title>SKEC Intro</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
-  :root {
-    --bg-black: #05070a;
-    --teal-glow: #14b8a6;
-    --teal-bright: #2dd4bf;
-    --teal-dim: #0d9488;
-    --white: #f4faf9;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    min-height: 100vh;
-    background:
-      radial-gradient(circle at 90% 10%, rgba(20,184,166,0.55) 0%, rgba(20,184,166,0.15) 30%, transparent 55%),
-      radial-gradient(circle at 0% 90%, rgba(88,28,135,0.35) 0%, transparent 45%),
-      var(--bg-black);
-    font-family: 'Inter', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 60px 24px;
-  }
-  h1 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-    font-size: 64px;
-    letter-spacing: 4px;
-    color: var(--teal-bright);
-    text-shadow: 0 0 24px rgba(45,212,191,0.4);
-    margin-bottom: 48px;
-  }
-  .options {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    width: 100%;
-    max-width: 640px;
-  }
-  .card {
-    background: rgba(20,184,166,0.06);
-    border: 1.5px solid rgba(45,212,191,0.5);
-    border-radius: 14px;
-    padding: 32px 36px;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
-  }
-  .card:hover {
-    transform: translateY(-4px);
-    background: rgba(20,184,166,0.14);
-    border-color: var(--teal-bright);
-  }
-  .card h2 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    letter-spacing: 1px;
-    color: var(--white);
-    margin-bottom: 10px;
-  }
-  .card p {
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    font-size: 15px;
-    color: rgba(244,250,249,0.75);
-    line-height: 1.5;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
+:root {
+--bg-black: #05070a;
+--teal-glow: #14b8a6;
+--teal-bright: #2dd4bf;
+--teal-dim: #0d9488;
+--white: #f4faf9;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+min-height: 100vh;
+background:
+radial-gradient(circle at 90% 10%, rgba(20,184,166,0.55) 0%, rgba(20,184,166,0.15) 30%, transparent 55%),
+radial-gradient(circle at 0% 90%, rgba(88,28,135,0.35) 0%, transparent 45%),
+var(--bg-black);
+font-family: 'Inter', sans-serif;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 60px 24px;
+}
+h1 {
+font-family: 'Poppins', sans-serif;
+font-weight: 800;
+font-size: 64px;
+letter-spacing: 4px;
+color: var(--teal-bright);
+text-shadow: 0 0 24px rgba(45,212,191,0.4);
+margin-bottom: 48px;
+}
+.options {
+display: flex;
+flex-direction: column;
+gap: 28px;
+width: 100%;
+max-width: 640px;
+}
+.card {
+background: rgba(20,184,166,0.06);
+border: 1.5px solid rgba(45,212,191,0.5);
+border-radius: 14px;
+padding: 32px 36px;
+text-align: center;
+cursor: pointer;
+transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+text-decoration: none;
+display: block;
+}
+.card:hover {
+transform: translateY(-4px);
+background: rgba(20,184,166,0.14);
+border-color: var(--teal-bright);
+}
+.card h2 {
+font-family: 'Poppins', sans-serif;
+font-weight: 700;
+font-size: 26px;
+letter-spacing: 1px;
+color: var(--white);
+margin-bottom: 10px;
+}
+.card p {
+font-family: 'Inter', sans-serif;
+font-weight: 500;
+font-size: 15px;
+color: rgba(244,250,249,0.75);
+line-height: 1.5;
+}
 </style>
 </head>
 <body>
-  <h1>SKEC</h1>
-  <div class="options">
-    <div class="card" onclick="window.location.href='course-overview.html'">
-      <h2>Course Overview</h2>
-      <p>Start with a guided introduction to all ten modules and see what you'll cover</p>
-    </div>
-    <div class="card" onclick="alert('Resources & Downloads selected')">
-      <h2>Resources &amp; Downloads</h2>
-      <p>Jump straight to free templates, guides, and teaching materials</p>
-    </div>
-    <div class="card" onclick="alert('Coaching Video selected')">
-      <h2>Coaching Video</h2>
-      <p>Watch a quick video tour of everything else on offer</p>
-    </div>
-  </div>
+<h1>SKEC</h1>
+<div class="options">
+<a href="course-overview.html" class="card">
+<h2>Course Overview</h2>
+<p>Start with a guided introduction to all ten modules and see what you'll cover</p>
+</a>
+<div class="card" onclick="alert('Resources & Downloads selected')">
+<h2>Resources &amp; Downloads</h2>
+<p>Jump straight to free templates, guides, and teaching materials</p>
+</div>
+<div class="card" onclick="alert('Coaching Video selected')">
+<h2>Coaching Video</h2>
+<p>Watch a quick video tour of everything else on offer</p>
+</div>
+</div>
 </body>
 </html>
