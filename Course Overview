@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SKEC - Course Overview</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
@@ -29,28 +30,36 @@ max-width: 800px;
 margin: 0 auto;
 }
 
-.back-button {
-background: rgba(20,184,166,0.1);
-border: 1px solid rgba(45,212,191,0.5);
-color: var(--teal-bright);
-padding: 10px 20px;
-border-radius: 8px;
-cursor: pointer;
-font-family: 'Inter', sans-serif;
-margin-bottom: 40px;
-transition: background 0.2s ease;
+.header {
+display: flex;
+align-items: center;
+gap: 16px;
+margin-bottom: 48px;
 }
 
-.back-button:hover {
+.back-btn {
 background: rgba(20,184,166,0.2);
+border: 1px solid rgba(45,212,191,0.5);
+color: var(--teal-bright);
+padding: 8px 16px;
+border-radius: 8px;
+cursor: pointer;
+font-weight: 600;
+transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+background: rgba(20,184,166,0.4);
+border-color: var(--teal-bright);
 }
 
 h1 {
 font-family: 'Poppins', sans-serif;
 font-weight: 800;
 font-size: 48px;
+letter-spacing: 2px;
 color: var(--teal-bright);
-margin-bottom: 40px;
+text-shadow: 0 0 24px rgba(45,212,191,0.4);
 }
 
 .modules {
@@ -65,86 +74,107 @@ border: 1.5px solid rgba(45,212,191,0.5);
 border-radius: 12px;
 padding: 24px;
 cursor: pointer;
-transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+transition: all 0.2s ease;
 }
 
 .module-card:hover {
-transform: translateY(-2px);
-background: rgba(20,184,166,0.12);
+transform: translateX(8px);
+background: rgba(20,184,166,0.14);
 border-color: var(--teal-bright);
 }
 
-.module-card h2 {
+.module-number {
 font-family: 'Poppins', sans-serif;
 font-weight: 700;
-font-size: 18px;
+font-size: 14px;
+color: rgba(45,212,191,0.7);
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-bottom: 6px;
+}
+
+.module-title {
+font-family: 'Poppins', sans-serif;
+font-weight: 700;
+font-size: 20px;
 color: var(--white);
 margin-bottom: 8px;
 }
 
-.module-card p {
+.module-desc {
 font-size: 14px;
 color: rgba(244,250,249,0.7);
-line-height: 1.4;
+line-height: 1.5;
 }
 </style>
 </head>
 <body>
 
 <div class="container">
-<button class="back-button" onclick="window.location.href='index.html'">← Back to Start</button>
-
-<h1>All Modules</h1>
+<div class="header">
+<button class="back-btn" onclick="window.location.href='index.html'">← Back</button>
+<h1>Course Overview</h1>
+</div>
 
 <div class="modules">
-<div class="module-card" onclick="alert('Module 1: Teacher Standards & Reflection')">
-<h2>1. Teacher Standards &amp; Reflection</h2>
-<p>Explore teacher standards, celebrate your choice to teach English, and understand the value of continuous professional development.</p>
+<div class="module-card" onclick="alert('Module 1 coming soon')">
+<div class="module-number">Module 1</div>
+<div class="module-title">Teacher Standards & Reflections</div>
+<div class="module-desc">Understand your role, celebrate your growth, and explore the teacher standards that guide your practice.</div>
 </div>
 
-<div class="module-card" onclick="alert('Module 2: Narrative Writing')">
-<h2>2. Narrative Writing</h2>
-<p>Learn what stories look like with minimal prep, operationalize creative writing, and master write-along examples and tasks.</p>
+<div class="module-card" onclick="alert('Module 2 coming soon')">
+<div class="module-number">Module 2</div>
+<div class="module-title">Narrative Writing</div>
+<div class="module-desc">From common errors to strong models, learn how to teach creative storytelling with write-alongs and practical tasks.</div>
 </div>
 
-<div class="module-card" onclick="alert('Module 3: Persuasive Writing')">
-<h2>3. Persuasive Writing</h2>
-<p>Compare weaker and stronger models, teach correlation versus causality, and help pupils build powerful arguments.</p>
+<div class="module-card" onclick="alert('Module 3 coming soon')">
+<div class="module-number">Module 3</div>
+<div class="module-title">Persuasive Writing</div>
+<div class="module-desc">Build arguments from evidence, teach correlation versus causality, and help pupils take a stance.</div>
 </div>
 
-<div class="module-card" onclick="alert('Module 4: Analytical Writing')">
-<h2>4. Analytical Writing</h2>
-<p>Examine grade boundaries, scaffold skills with sentence-by-sentence models, and explore analytical frameworks and bookmarks.</p>
+<div class="module-card" onclick="alert('Module 4 coming soon')">
+<div class="module-number">Module 4</div>
+<div class="module-title">Analytical Writing</div>
+<div class="module-desc">Master the grade boundaries, scaffold with sentence-by-sentence models, and use analytical frameworks.</div>
 </div>
 
-<div class="module-card" onclick="alert('Module 5: Literature &amp; Unseen Poetry')">
-<h2>5. Literature &amp; Unseen Poetry</h2>
-<p>Teach themes and comparison as skills, use visual scaffolds like boxes, and apply PAINFUL and POETIC frameworks.</p>
+<div class="module-card" onclick="alert('Module 5 coming soon')">
+<div class="module-number">Module 5</div>
+<div class="module-title">Literature & Unseen Poetry</div>
+<div class="module-desc">Teach themes, comparison, and visual scaffolds like boxes to help pupils unlock unseen poetry.</div>
 </div>
 
-<div class="module-card" onclick="alert('Module 6: Macbeth')">
-<h2>6. Macbeth</h2>
-<p>Explore characters, plot, themes, and writer's intentions. Learn to grade and moderate essays effectively.</p>
+<div class="module-card" onclick="alert('Module 6 coming soon')">
+<div class="module-number">Module 6</div>
+<div class="module-title">Macbeth & Romeo and Juliet</div>
+<div class="module-desc">Explore character, plot, themes, and writer's intentions across Shakespeare's greatest works.</div>
 </div>
 
-<div class="module-card" onclick="alert('Module 7: Romeo &amp; Juliet')">
-<h2>7. Romeo &amp; Juliet</h2>
-<p>Dive into Shakespeare's tragedy with the same depth as Macbeth, covering characters, themes, and essay techniques.</p>
+<div class="module-card" onclick="alert('Module 7 coming soon')">
+<div class="module-number">Module 7</div>
+<div class="module-title">A Christmas Carol & Jekyll and Hyde</div>
+<div class="module-desc">Navigate Victorian literature and the moral dilemmas at the heart of these enduring texts.</div>
 </div>
 
-<div class="module-card" onclick="alert('Module 8: A Christmas Carol &amp; Jekyll &amp; Hyde')">
-<h2>8. A Christmas Carol &amp; Jekyll &amp; Hyde</h2>
-<p>Study Victorian literature with focus on characters, themes, social context, and essay craft.</p>
+<div class="module-card" onclick="alert('Module 8 coming soon')">
+<div class="module-number">Module 8</div>
+<div class="module-title">An Inspector Calls & Animal Farm</div>
+<div class="module-desc">Unpack social responsibility, power, and allegory in these modern classics.</div>
 </div>
 
-<div class="module-card" onclick="alert('Module 9: An Inspector Calls &amp; Animal Farm')">
-<h2>9. An Inspector Calls &amp; Animal Farm</h2>
-<p>Examine modern and allegorical drama, exploring power, responsibility, and social messaging.</p>
+<div class="module-card" onclick="alert('Module 9 coming soon')">
+<div class="module-number">Module 9</div>
+<div class="module-title">How to Improve People's Writing</div>
+<div class="module-desc">Sentence-by-sentence activities, progression strategies, and moving pupils from good to great.</div>
 </div>
 
-<div class="module-card" onclick="alert('Module 10: How to Improve Student Work')">
-<h2>10. How to Improve Student Work</h2>
-<p>Learn practical strategies for giving feedback, using sentence-by-sentence activities, and moving work from good to great.</p>
+<div class="module-card" onclick="alert('Module 10 coming soon')">
+<div class="module-number">Module 10</div>
+<div class="module-title">Behaviour for Learning</div>
+<div class="module-desc">Create a positive classroom culture and tap into the Behaviour for Learning framework for sustainable change.</div>
 </div>
 </div>
 </div>
